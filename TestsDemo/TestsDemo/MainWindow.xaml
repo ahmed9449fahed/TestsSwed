@@ -1,0 +1,36 @@
+﻿<dx:DXWindow xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation"  xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"  x:Class="TestsDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:navigation="http://schemas.devexpress.com/winfx/2008/xaml/windowsui/navigation"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            
+                <dxnav:TileNavPane Background="CadetBlue" Height="45" DockPanel.Dock="Top">
+                    <dxnav:TileNavPane.NavButtons>
+
+                        <dxnav:NavButton  VerticalAlignment="Top" Content="File">
+                            <dxnav:TileNavSubItem Content="CrateNewTest" Command="{Binding QuestionView}"/>
+                            <dxnav:TileNavSubItem Content="OpenTest" Command="{Binding TestView}"/>
+                        </dxnav:NavButton>
+                        <dxnav:NavButton VerticalAlignment="Top" Content="About" Command="{Binding AboutView}"/>
+                        <dxnav:NavButton VerticalAlignment="Top" Glyph="Image/tiger-2-icon.png" HorizontalAlignment="Right" Height="74" Margin="0,-18,0,0"></dxnav:NavButton>
+                    </dxnav:TileNavPane.NavButtons>
+                </dxnav:TileNavPane>
+            
+            <dxwui:NavigationFrame  BackNavigationMode="PreviousScreen"
+                                   DockPanel.Dock="Bottom">
+                    <dxmvvm:Interaction.Behaviors>
+                        <navigation:FrameNavigationService/>
+                    </dxmvvm:Interaction.Behaviors>
+                <Image Source="Image/standardized-test-site.jpg" Stretch="Fill"></Image>
+                </dxwui:NavigationFrame>
+         
+            
+        </DockPanel>
+    </Grid>
+</dx:DXWindow>
