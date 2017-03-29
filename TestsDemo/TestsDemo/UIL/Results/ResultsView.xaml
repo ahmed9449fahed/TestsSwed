@@ -1,0 +1,51 @@
+﻿<UserControl xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"  xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"  x:Class="TestsDemo.UIL.ResultsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             mc:Ignorable="d"
+             d:DesignHeight="800" d:DesignWidth="1200">
+    <Grid Loaded="Grid_Loaded">
+        <dxlc:LayoutControl Orientation="Horizontal">
+            <dxg:GridControl Name="GridControlResults" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MaxWidth="500">
+            <dxg:GridControl.View>
+                
+                <dxg:TableView Name="TableView" ShowGroupPanel="False" AllowPerPixelScrolling="True" ShowTotalSummary="True"/>
+            </dxg:GridControl.View>
+                <dxg:GridControl.Columns>
+                       <dxg:GridColumn Name="ResultColumn" Header="ImageColumn" AllowEditing="False">
+                        <dxg:GridColumn.DisplayTemplate>
+                            <ControlTemplate>
+                                <Grid Margin="8,8,4,4" MaxHeight="50" MaxWidth="50">
+                                    <Border Background="Red" CornerRadius="4,4,4,4" Padding="4" Margin="0,0,5,5"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </dxg:GridColumn.DisplayTemplate>
+                    </dxg:GridColumn>
+               
+                </dxg:GridControl.Columns>
+            </dxg:GridControl>
+            <GroupBox Width="500" HorizontalAlignment="Right">
+                <dxlc:LayoutGroup HorizontalAlignment="Center" Orientation="Vertical">
+                    <dxlc:LayoutGroup Orientation="Horizontal">
+                        <Label VerticalAlignment="Top" Width="20" Height="20" Background="Red" Margin="20"/>
+                        <Label VerticalContentAlignment="Center" Height="20">Successfuly</Label>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup Orientation="Horizontal">
+                        <Label VerticalAlignment="Top" Width="20" Height="20" Background="#FF6633" Margin="20"/>
+                        <Label VerticalContentAlignment="Center" Height="20">Successfuly</Label>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup Orientation="Horizontal">
+                        <Label VerticalAlignment="Top" Width="20" Height="20" Background="Green" Margin="20"/>
+                        <Label VerticalContentAlignment="Center" Height="20">Successfuly</Label>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup Orientation="Horizontal">
+                        <Label VerticalAlignment="Top" Width="20" Height="20" Background="white" Margin="20"/>
+                        <Label VerticalContentAlignment="Center" Height="20">Successfuly</Label>
+                    </dxlc:LayoutGroup>
+                </dxlc:LayoutGroup>
+            </GroupBox>
+        </dxlc:LayoutControl>
+    </Grid>
+</UserControl>

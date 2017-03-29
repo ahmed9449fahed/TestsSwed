@@ -10,9 +10,9 @@
         <dxlc:LayoutControl Orientation="Horizontal">
 
             <dxlc:LayoutGroup Orientation="Vertical">
-                <dxlc:LayoutItem Label="The Question">
-                        <TextBox  VerticalScrollBarVisibility="Visible" Height="110" x:Name="TxtQuestion"  TextWrapping="Wrap"/>
-                    </dxlc:LayoutItem>
+                        <Label Height="30" FontSize="18" HorizontalContentAlignment="Center">The Question</Label>
+                        <TextBox  VerticalScrollBarVisibility="Visible" Height="70" x:Name="TxtQuestion"  TextWrapping="Wrap"/>
+                
                     
                
                 <dxlc:LayoutGroup>
@@ -23,76 +23,76 @@
                 <dxlc:LayoutItem Label="Answer1">
                     <TextBox x:Name="TxtAnswer1"  TextWrapping="Wrap"/>
                 </dxlc:LayoutItem>
-                <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check1" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
             </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer2">
                         <TextBox x:Name="TxtAnswer2"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check2" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer3">
                         <TextBox x:Name="TxtAnswer3"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check3" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer4">
                         <TextBox x:Name="TxtAnswer4"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check4" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer5">
                         <TextBox x:Name="TxtAnswer5"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check5" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer6">
                         <TextBox x:Name="TxtAnswer6"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check6" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer7">
                         <TextBox x:Name="TxtAnswer7"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check7" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer8">
                         <TextBox x:Name="TxtAnswer8"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check8" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer9">
                         <TextBox x:Name="TxtAnswer9"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check9" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup Height="25" Orientation="Horizontal">
                     <dxlc:LayoutItem Label="Answer10">
                         <TextBox x:Name="TxtAnswer10"  TextWrapping="Wrap"/>
                     </dxlc:LayoutItem>
-                    <CheckBox Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
+                    <CheckBox Name="check10" Width="20" Height="25" VerticalAlignment="Top"></CheckBox>
                 </dxlc:LayoutGroup>
                 <dxlc:LayoutGroup>
-                <Button Height="30" Content="Add"/>
+                <Button Height="30" Content="Add" Click="ButtonBase_OnClick"/>
                 <Button Height="30" Content="Edit"/>
             </dxlc:LayoutGroup>
             </dxlc:LayoutGroup>
             <dxlc:LayoutGroup Orientation="Vertical">
-                <Label Height="30" FontSize="20">Questions</Label>
-            <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Label Height="30" FontSize="20" HorizontalAlignment="Center">Questions</Label>
+                <dxg:GridControl Name="GridControlQuestions" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <dxg:GridControl.View>
                     <dxg:TableView ShowGroupPanel="False" AllowPerPixelScrolling="True" ShowTotalSummary="True"/>
                 </dxg:GridControl.View>
             </dxg:GridControl>
-                <Label Height="30" FontSize="20">Answers</Label>
-                <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Label Height="30" FontSize="20" HorizontalContentAlignment="Center">Answers</Label>
+                <dxg:GridControl Name="GridControlAnswers" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <dxg:GridControl.View>
                         <dxg:TableView ShowGroupPanel="False" AllowPerPixelScrolling="True" ShowTotalSummary="True"/>
                     </dxg:GridControl.View>

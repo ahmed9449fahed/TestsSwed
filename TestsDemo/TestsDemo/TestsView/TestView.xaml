@@ -1,12 +1,66 @@
-﻿<UserControl x:Class="TestsDemo.TestsView.TestView"
+﻿<UserControl xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"  x:Class="TestsDemo.TestsView.TestView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="700" d:DesignWidth="1300">
     <Grid>
-        <dxlc:LayoutControl Background="Aqua"></dxlc:LayoutControl>
+        <dxlc:LayoutControl Background="Azure" Orientation="Horizontal">
+            <dxlc:LayoutGroup  Width="500" Orientation="Vertical">
+                <dxlc:LayoutGroup Background="LightGray" Orientation="Vertical">
+                    <dx:SimpleButton Glyph="../Image/Flag-red-icon.png" Height="30" Width="60" HorizontalAlignment="Right"></dx:SimpleButton>
+                    <Label Name="lblQuestion"  Height="80" Content="Test Question?"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Background="LightBlue" Height="60" Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer1" FontSize="20" Width="40" Content="A"></CheckBox>
+                    <Label Name="lblAnswer1"  VerticalContentAlignment="Center" Content="Answer1"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Background="LightBlue" Height="60" Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer2" FontSize="20" Width="40" Content="B"></CheckBox>
+                    <Label Name="lblAnswer2"  VerticalContentAlignment="Center" Content="Answer2"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Background="LightBlue" Height="60" Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer3" FontSize="20" Width="40" Content="C"></CheckBox>
+                    <Label Name="lblAnswer3" Content="Answer3" VerticalContentAlignment="Center" />
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Background="LightBlue" Height="60" Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer4" FontSize="20" Width="40" Content="D"></CheckBox>
+                    <Label Name="lblAnswer4"  VerticalContentAlignment="Center" Content="Answer4"/>
+                </dxlc:LayoutGroup>
+              <dxlc:LayoutGroup Orientation="Horizontal">
+                  <Label Height="40" Width="40" FontSize="20" HorizontalAlignment="Right">1/70</Label>
+                  <dx:SimpleButton Glyph="../Image/Actions-go-next-icon.png" GlyphAlignment="Bottom" Width="100" Height="30" Margin="40" HorizontalAlignment="Right"></dx:SimpleButton>
+              </dxlc:LayoutGroup>
+                <!--<dxlc:LayoutGroup Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer5" FontSize="20" Content="E"></CheckBox>
+                    <Label Name="lblAnswer5" Height="40"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer6" FontSize="20" Content="F"></CheckBox>
+                    <Label Name="lblAnswer6" Height="40"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer7" FontSize="20" Content="G"></CheckBox>
+                    <Label Name="lblAnswer7" Height="40"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer8" FontSize="20" Content="H"></CheckBox>
+                    <Label Name="lblAnswer8" Height="40"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer9" FontSize="20" Content="I"></CheckBox>
+                    <Label Name="lblAnswer9" Height="40"/>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Orientation="Horizontal">
+                    <CheckBox Name="checkAnswer10" FontSize="20" Content="J"></CheckBox>
+                    <Label Name="lblAnswer10" Height="40"/>
+                </dxlc:LayoutGroup>-->
+            </dxlc:LayoutGroup>
+         
+            <Image Height="500" Margin="40,30,0,0" VerticalAlignment="Top" Width="700" Source="../Image/learn-to-drive.jpg"></Image>
+         
+        </dxlc:LayoutControl>
     </Grid>
 </UserControl>

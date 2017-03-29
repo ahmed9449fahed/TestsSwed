@@ -67,11 +67,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataManager\Questions.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="TestsView\TestView.xaml.cs">
       <DependentUpon>TestView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UIL\HomeView\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UIL\QuestionsView\QuestionView.xaml.cs">
       <DependentUpon>QuestionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\Results\ResultsView.xaml.cs">
+      <DependentUpon>ResultsView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -90,7 +98,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UIL\HomeView\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UIL\QuestionsView\QuestionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIL\Results\ResultsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,7 +138,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UIL\HomeView\" />
+    <Resource Include="Image\Flag-red-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\tiger-2-icon.png" />
@@ -132,6 +148,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\standardized-test-site.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Actions-go-next-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\MIDI-red-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

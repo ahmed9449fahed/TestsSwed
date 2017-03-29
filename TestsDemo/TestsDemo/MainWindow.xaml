@@ -10,16 +10,24 @@
     <Grid>
         <DockPanel LastChildFill="True">
             
-                <dxnav:TileNavPane Background="CadetBlue" Height="45" DockPanel.Dock="Top">
+                <dxnav:TileNavPane Background="DarkOrange" Height="45" DockPanel.Dock="Top">
                     <dxnav:TileNavPane.NavButtons>
-
+                    <dxnav:NavButton Margin="0,-8,0,0" Glyph="Image/home-icon.png" Command="{Binding HomeView}"></dxnav:NavButton>
                         <dxnav:NavButton  VerticalAlignment="Top" Content="File">
+        
                             <dxnav:TileNavSubItem Content="CrateNewTest" Command="{Binding QuestionView}"/>
                             <dxnav:TileNavSubItem Content="OpenTest" Command="{Binding TestView}"/>
-                        </dxnav:NavButton>
+                        <dxnav:TileNavSubItem Content="Results" Command="{Binding ResultsView}"/>
+
+                        
+                           
+                           </dxnav:NavButton>
+                        
                         <dxnav:NavButton VerticalAlignment="Top" Content="About" Command="{Binding AboutView}"/>
                         <dxnav:NavButton VerticalAlignment="Top" Glyph="Image/tiger-2-icon.png" HorizontalAlignment="Right" Height="74" Margin="0,-18,0,0"></dxnav:NavButton>
+                  
                     </dxnav:TileNavPane.NavButtons>
+                 
                 </dxnav:TileNavPane>
             
             <dxwui:NavigationFrame  BackNavigationMode="PreviousScreen"
@@ -28,7 +36,8 @@
                         <navigation:FrameNavigationService/>
                     </dxmvvm:Interaction.Behaviors>
                 <Image Source="Image/standardized-test-site.jpg" Stretch="Fill"></Image>
-                </dxwui:NavigationFrame>
+
+            </dxwui:NavigationFrame>
          
             
         </DockPanel>
